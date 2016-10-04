@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace _11_Files
+namespace StockApp
 {
     internal interface IStockRepository
     {

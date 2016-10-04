@@ -1,5 +1,5 @@
 ﻿using System;
-namespace _11_Files
+namespace StockApp
 {
     internal class Stock : IAsset
     {

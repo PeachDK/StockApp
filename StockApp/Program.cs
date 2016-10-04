@@ -10,20 +10,24 @@ namespace StockApp
     {
         static void Main(string[] args)
         {
-            string choice = "";
-            bool running = true;
+            string choice   = "";
+            bool   running  = true;
+            Menu   menu     = new Menu();
+
             do
             {
-                Console.WriteLine("Make a choice:");
-                Console.WriteLine("1: Browse Stock");
-                Console.WriteLine("2: Search Stock");
-                Console.WriteLine("3: Buy Stock");
+                menu.Home();
+
                 choice = Console.ReadLine();
                 Console.Clear();
+
                 switch (choice)
                 {
                     case "1":
                         Console.WriteLine("List of Stock:");
+
+                        menu.ShowAllStocks();
+
                         Console.ReadLine();
                         break;
                     case "2":
@@ -31,13 +35,15 @@ namespace StockApp
                         Console.ReadLine();
                         break;
                     case "3":
-                        Console.WriteLine("Buy Stock");
-                        Console.ReadLine();
+                        Console.WriteLine("Buy Stock:");
+                        menu.BuyStock();
+                        Console.Read();
                         break;
                     default:
                         break;
                 }
                 Console.Clear();
+
             } while (running);
 
         }

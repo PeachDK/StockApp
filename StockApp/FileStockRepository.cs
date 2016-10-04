@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace _11_Files
+namespace StockApp
 {
     
     internal class FileStockRepository : IFileRepository
@@ -26,7 +26,12 @@ namespace _11_Files
 
         public void SaveStock(Stock asset)
         {
-            asset.Id = NextId();               
+            asset.Id = NextId(); 
+            FileInfo fi = new FileInfo(StockFileName(asset.Id));
+            
+            if(fi.Exists)
+                fi.Delete();
+
             stockio.WriteStock(new FileInfo(StockFileName(asset.Id)), asset);
             stocks.Add(asset);
         }

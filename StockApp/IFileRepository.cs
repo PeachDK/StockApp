@@ -1,4 +1,4 @@
-﻿namespace _11_Files
+﻿namespace StockApp
 {
     internal interface IFileRepository : IStockRepository 
     {

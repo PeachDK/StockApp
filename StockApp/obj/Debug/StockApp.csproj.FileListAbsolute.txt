@@ -1,0 +1,6 @@
+C:\Users\black\Desktop\StockApp-master\StockApp-master\StockApp\bin\Debug\StockApp.exe.config
+C:\Users\black\Desktop\StockApp-master\StockApp-master\StockApp\bin\Debug\StockApp.exe
+C:\Users\black\Desktop\StockApp-master\StockApp-master\StockApp\bin\Debug\StockApp.pdb
+C:\Users\black\Desktop\StockApp-master\StockApp-master\StockApp\obj\Debug\StockApp.csprojResolveAssemblyReference.cache
+C:\Users\black\Desktop\StockApp-master\StockApp-master\StockApp\obj\Debug\StockApp.exe
+C:\Users\black\Desktop\StockApp-master\StockApp-master\StockApp\obj\Debug\StockApp.pdb
