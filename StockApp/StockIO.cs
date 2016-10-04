@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _11_Files
+namespace StockApp
 {
     class StockIO
     {
@@ -14,7 +14,13 @@ namespace _11_Files
         internal void WriteStock(StringWriter sw, Stock asset)
         {
             sw.Write(asset.Symbol + NL + asset.PricePerShare + NL + asset.NumShares + NL);          
-             
+        }
+        internal void WriteStock(FileInfo output, Stock asset)
+        {            
+            using (StreamWriter writer = output.AppendText())
+            {
+                writer.WriteLine(asset.Symbol + " " + asset.PricePerShare + " " + asset.NumShares);
+            }
         }
 
         internal Stock ReadStock(StringReader data)
@@ -30,7 +36,6 @@ namespace _11_Files
             using (StreamReader fs = output.OpenText())
             {
                s = fs.ReadToEnd();             
-
             }
 
             string[] data = s.Split();
@@ -39,12 +44,6 @@ namespace _11_Files
             return datastock;
         }
 
-        internal void WriteStock(FileInfo output, Stock asset)
-        {            
-            using (StreamWriter writer = output.AppendText())
-            {
-                writer.WriteLine(asset.Symbol + " " + asset.PricePerShare + " " + asset.NumShares);
-            }
-        }
+        
     }
 }
